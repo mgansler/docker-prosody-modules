@@ -10,6 +10,6 @@ RUN	apt-get update \
 WORKDIR /usr/lib/
 RUN hg clone https://code.google.com/p/prosody-modules/
 WORKDIR /usr/lib/prosody-modules/
-RUN hg update -r 9abd3dce619a
+RUN hg update -r c619425dafe7
 
 VOLUME ["/usr/lib/prosody-modules"]
