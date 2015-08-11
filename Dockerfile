@@ -1,7 +1,8 @@
 FROM debian:jessie
 MAINTAINER martin@martingansler.de
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive \
+    REVISON=c353acd1d366
 
 RUN	apt-get update \
 	&& apt-get install --yes --no-install-recommends mercurial ca-certificates \
@@ -10,6 +11,6 @@ RUN	apt-get update \
 WORKDIR /usr/lib/
 RUN hg clone https://code.google.com/p/prosody-modules/
 WORKDIR /usr/lib/prosody-modules/
-RUN hg update -r fb2b9a2e2316 
+RUN hg update -r $REVISON 
 
 VOLUME ["/usr/lib/prosody-modules"]
