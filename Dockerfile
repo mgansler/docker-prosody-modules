@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER martin@martingansler.de
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    REVISON=ff95d983940c
+    REVISON=1a5be0ecc876
 
 RUN	apt-get update \
 	&& apt-get install --yes --no-install-recommends mercurial ca-certificates \
